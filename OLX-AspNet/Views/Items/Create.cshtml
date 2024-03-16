@@ -1,0 +1,52 @@
+﻿﻿
+@model Item;
+<h1>Create New Item</h1>
+
+<form class="row g-3" method="post" asp-action="Create">
+    <div class="col-md-8">
+        <label asp-for=Title class="form-label">Name</label>
+        <input asp-for=Title type="text" class="form-control" placeholder="Enter item title">
+        <span asp-validation-for=Title class="form-text text-danger"></span>
+    </div>
+    <div class="col-md-4">
+        <label asp-for=Price class="form-label">Price</label>
+        <input asp-for=Price type="number" class="form-control" placeholder="Enter item price">
+        <span asp-validation-for=Price class="form-text text-danger"></span>
+    </div>
+    <div class="col-md-8">
+        <label asp-for="CategoryId" class="form-label">Category</label>
+        <select asp-items="ViewBag.Categories" asp-for=CategoryId class="form-select">
+            <option selected disabled>Choose...</option>
+        </select>
+    </div>
+    <div class="col-4">
+        <label asp-for=Address class="form-label">Address</label>
+        <input asp-for=Address type="text" value="0" min="0" class="form-control" placeholder="Enter address">
+        <span asp-validation-for=Address class="form-text text-danger"></span>
+    </div>
+    <div class="col-md-12">
+        <label asp-for=Image class="form-label">Image URL</label>
+        <input asp-for=Image type="url" class="form-control" placeholder="Enter image URL">
+    </div>
+    <div class="col-md-12">
+        <label asp-for=Description type="text" class="form-label">Description</label>
+        <textarea asp-for=Description type="text" class="form-control" rows="3" placeholder="Enter item description"></textarea>
+        <span asp-validation-for=Description class="form-text text-danger"></span>
+    </div>
+    <div class="col-md-12">
+        <label for="Time" class="form-label">Date</label>
+        <input type="text" id="Time" class="form-control" readonly>
+    </div>
+
+
+    <script>
+        document.getElementById('Time').value = new Date().toLocaleString();
+    </script>
+
+    <div class="col-6">
+        <a asp-action="Index" class="btn btn-dark w-100">Back</a>
+    </div>
+    <div class="col-6">
+        <button type="submit" class="btn btn-success w-100">Create</button>
+    </div>
+</form>

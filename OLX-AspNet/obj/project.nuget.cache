@@ -1,12 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "zjyHX9fW4TDny1Ve5slMqAD6G5djJhRg77DhunsW+qIxN+UACWyuoGX1tGwtOs5YgvlWWJ6TjOqK1EsHqHX4xQ==",
+  "dgSpecHash": "f5tScu0o0gnFL3ImwSSecIG7ZB/cnZgMQcBTTmjDqgYzKHlV/VLdbLURpaDHIfpXiD8W4sLFVQPFs3kJWnJ3Rg==",
   "success": true,
   "projectFilePath": "C:\\Users\\legion\\Desktop\\OLX-AspNet\\OLX-AspNet\\OLX-AspNet.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\legion\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\legion\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
     "C:\\Users\\legion\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
+    "C:\\Users\\legion\\.nuget\\packages\\fluentvalidation\\11.9.0\\fluentvalidation.11.9.0.nupkg.sha512",
+    "C:\\Users\\legion\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.3.0\\fluentvalidation.aspnetcore.11.3.0.nupkg.sha512",
+    "C:\\Users\\legion\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.5.1\\fluentvalidation.dependencyinjectionextensions.11.5.1.nupkg.sha512",
     "C:\\Users\\legion\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\legion\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\legion\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

@@ -1,0 +1,50 @@
+﻿@using OLX_AspNet.Data.Entities;
+
+@model List<Item>;
+
+@{
+    ViewData["Title"] = "Items";
+}
+
+<div>
+    <a asp-action="Create" class="btn btn-primary">Create New Product</a>
+</div>
+
+<table class="table table-striped mt-2">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Image</th>
+            <th scope="col">Name</th>
+            <th scope="col">Price</th>
+            <th scope="col">Category</th>
+            <th scope="col"></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var i in Model)
+        {
+            <tr class="align-middle">
+                <th scope="row">@i.Id</th>
+                <th scope="row" style="width: 50px;">
+                    <img class="rounded-2 zoom" height="40" src="@i.Image" alt="@i.Title" />
+                </th>
+                <td>@i.Price$</td>
+                <td>@(i.Category?.Name ?? "not loaded")</td>
+                <td>
+                    <div class="btn-group" role="group" aria-label="Basic example">
+                        <a class="btn btn-secondary" asp-action="Details" asp-route-id="@i.Id" asp-route-returnUrl="@Context.Request.Path">
+                            <i class="bi bi-info-lg"></i>
+                        </a>
+                        <a class="btn btn-warning" asp-action="Edit" asp-route-id="@i.Id">
+                            <i class="bi bi-pencil-fill"></i>
+                        </a>
+                        <a class="btn btn-danger" asp-action="Delete" asp-route-id="@i.Id">
+                            <i class="bi bi-trash-fill"></i>
+                        </a>
+                    </div>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

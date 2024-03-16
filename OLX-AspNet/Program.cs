@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using OLX_AspNet.Data;
+using FluentValidation;
+using FluentValidation.AspNetCore;
 
 namespace MVC_pd221
 {
@@ -14,10 +16,10 @@ namespace MVC_pd221
             // Add services to the container.
             // DI - Dependency Injection. It implements SOLI[D] principle Dependency Inversion
             builder.Services.AddControllersWithViews();
-
+            builder.Services.AddFluentValidationAutoValidation();
             builder.Services.AddDbContext<OLXDbContext>(opts =>
                 opts.UseSqlServer(connStr));
-
+            builder.Services.AddValidatorsFromAssemblies(AppDomain.CurrentDomain.GetAssemblies());
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.

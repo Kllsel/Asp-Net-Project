@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using OLX_AspNet.Data;
 
@@ -11,9 +12,11 @@ using OLX_AspNet.Data;
 namespace OLX_AspNet.Migrations
 {
     [DbContext(typeof(OLXDbContext))]
-    partial class OLXDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240207153750_CreateCategory")]
+    partial class CreateCategory
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
